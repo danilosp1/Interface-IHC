@@ -5,7 +5,7 @@ import { Search, Info, Laptop2, ArrowDownLeftFromSquare } from 'lucide-react';
 import Link from 'next/link'
 
 
-export default function Places() {
+export default function Conselho() {
     return (
         <main className="flex flex-row h-screen items-center justify-center">
             <div className="w-[20%] 2xl:w-[25%] flex flex-col justify-between items-center p-4 absolute h-full left-0 z-0">

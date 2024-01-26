@@ -10,7 +10,7 @@ export default function Home() {
       <div className="w-[20%] 2xl:w-[25%] flex flex-col justify-evenly items-center p-4">
         <Image src={image} width={350} height={350}></Image>
         <Image src={image} width={350} height={350}></Image>
-        <Image src={image} width={350} height={350}></Image>  
+        <Image src={image} width={350} height={350}></Image>
       </div>
 
       <div className="w-[60%] 2xl:w-[50%] flex flex-col items-center justify-center h-full">
@@ -30,21 +30,26 @@ export default function Home() {
               <Search size="28px" />
             </Button>
           </Link>
-          <Button className="">
-            Ajuda
-            <Info size="28px" />
-          </Button>
-          <Button className="pages/support">
-            Suporte Técnico
-            <Laptop2 size="28px" />
-          </Button>
+          <Link href="pages/help">
+            <Button className="">
+              Ajuda
+              <Info size="28px" />
+            </Button>
+          </Link>
+          <Link href="pages/support">
+            <Button className="">
+              Suporte Técnico
+              <Laptop2 size="28px" />
+            </Button>
+
+          </Link>
         </div>
       </div>
 
       <div className="w-[20%] 2xl:w-[25%] flex flex-col justify-evenly items-center p-4">
         <Image src={image} width={350} height={350}></Image>
         <Image src={image} width={350} height={350}></Image>
-        <Image src={image} width={350} height={350}></Image>  
+        <Image src={image} width={350} height={350}></Image>
       </div>
     </main>
   );

@@ -21,7 +21,7 @@ export default function Places() {
                     A UFSCar possui serviços gratuitos de atendimento psicológico
                 </div>
                 <div className="text-center text-black text-4xl font-bold my-2">
-                    Projeto X: (99) 99999-9999
+                Projeto X: (99) 99999-9999
                 </div>
                 <div className="text-center text-black text-4xl font-bold my-2">
                     Projeto X: (99) 99999-9999
