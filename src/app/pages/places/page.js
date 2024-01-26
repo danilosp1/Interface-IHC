@@ -4,7 +4,7 @@ import image from "../../../../public/logoDC.svg"
 import { Search, Info, Laptop2 } from 'lucide-react';
 import Link from 'next/link'
 
-export default function Home() {
+export default function Places() {
   return (
     <main className="flex flex-row h-screen">
       <div className="w-[25%] flex flex-col justify-evenly items-center">
@@ -13,10 +13,10 @@ export default function Home() {
 
       <div className="w-[50%] flex flex-col items-center justify-center h-full">
         <div className="text-black text-8xl font-normal mb-6">
-          Olá, tudo bem?
+          Lugares
         </div>
         <div className="text-center text-black text-2xl font-normal w-[50%] my-6">
-          Eu sou o robô do departamento da computação e estou aqui para te ajudar!
+          Estes são os lugares do departamento, selecione um para mais informações
         </div>
         <div className="text-center text-black text-2xl font-bold my-6">
           Selecione uma opção
