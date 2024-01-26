@@ -7,7 +7,7 @@ import Link from 'next/link'
 export default function Home() {
   return (
     <main className="flex flex-row h-screen">
-      <div className="w-[20%] 2xl:w-[25%] flex flex-col justify-evenly items-center">
+      <div className="w-[20%] 2xl:w-[25%] flex flex-col justify-evenly items-center p-4">
         <Image src={image} width={350} height={350}></Image>
         <Image src={image} width={350} height={350}></Image>
         <Image src={image} width={350} height={350}></Image>  
@@ -34,14 +34,14 @@ export default function Home() {
             Ajuda
             <Info size="28px" />
           </Button>
-          <Button className="">
+          <Button className="pages/support">
             Suporte Técnico
             <Laptop2 size="28px" />
           </Button>
         </div>
       </div>
 
-      <div className="w-[20%] 2xl:w-[25%] flex flex-col justify-evenly items-center">
+      <div className="w-[20%] 2xl:w-[25%] flex flex-col justify-evenly items-center p-4">
         <Image src={image} width={350} height={350}></Image>
         <Image src={image} width={350} height={350}></Image>
         <Image src={image} width={350} height={350}></Image>  
