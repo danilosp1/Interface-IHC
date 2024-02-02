@@ -1,9 +1,8 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button"
 import image from "../../../../public/logoDC.svg"
-import { Search, Info, Laptop2, ArrowDownLeftFromSquare } from 'lucide-react';
+import {ChevronLeft } from 'lucide-react';
 import Link from 'next/link'
-
 
 export default function Support() {
     return (
@@ -25,9 +24,9 @@ export default function Support() {
                 </div>
 
                 <div className="">
-                    <Link href="/pages/">
+                    <Link href="/">
                         <Button className="w-[22rem] justify-start gap-24">
-                            <Search size="28px" />
+                            <ChevronLeft size="28px" />
                             Voltar
                         </Button>
                     </Link>

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button"
 import image from "../../../../public/logoDC.svg"
-import { Search, Info, Laptop2, ArrowDownLeftFromSquare } from 'lucide-react';
+import {Info, Computer, MonitorCheck, Presentation, Droplets, LibraryBig, ChevronLeft} from 'lucide-react';
 import Link from 'next/link'
 
 
@@ -27,19 +27,19 @@ export default function Places() {
           <Link href="/pages/">
             <Button className="w-[22rem]">
               Banheiros
-              <ArrowDownLeftFromSquare size="28px" />
+              <Droplets size="28px" />
             </Button>
           </Link>
           <Link href="/pages/">
             <Button className="w-[22rem]">
               LIG
-              <Search size="28px" />
+              <Computer size="28px" />
             </Button>
           </Link>
           <Link href="/pages/">
             <Button className="w-[22rem]">
               Secretaria
-              <Search size="28px" />
+              <Info size="28px" />
             </Button>
           </Link>
         </div>
@@ -47,26 +47,26 @@ export default function Places() {
           <Link href="/pages/">
             <Button className="w-[22rem]">
               Auditório
-              <Search size="28px" />
+              <Presentation size="28px" />
             </Button>
           </Link>
           <Link href="/pages/">
             <Button className="w-[22rem]">
               Laboratórios
-              <Search size="28px" />
+              <MonitorCheck size="28px" />
             </Button>
           </Link>
           <Link href="/pages/">
             <Button className="w-[22rem]">
               Professores
-              <Search size="28px" />
+              <LibraryBig size="28px" />
             </Button>
           </Link>
         </div>
         <div className="">
           <Link href="/">
             <Button className="w-[22rem] justify-start gap-24">
-              <Search size="28px" />
+              <ChevronLeft size="28px" />
               Voltar
             </Button>
           </Link>

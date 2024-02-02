@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button"
 import image from "../../../../public/logoDC.svg"
-import { Search, Info, Laptop2, ArrowDownLeftFromSquare } from 'lucide-react';
+import { Search, Info, Laptop2, ChevronLeft, Smile, HelpCircle} from 'lucide-react';
 import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
 
@@ -34,6 +34,7 @@ export default function Places() {
                     <Link href="/pages/">
                         <Button className="w-[22rem]">
                             Não estou triste
+                            <Smile size="28px"/>
                         </Button>
                     </Link>
                 </div>
@@ -41,7 +42,7 @@ export default function Places() {
                     <Link href="/pages/">
                         <Button className="w-[22rem]">
                             Conselho
-                            <Search size="28px" />
+                            <HelpCircle size="28px" />
                         </Button>
                     </Link>
                 </div>
@@ -51,9 +52,9 @@ export default function Places() {
                     </div>
                 </Link>
                 <div className="">
-                    <Link href="/pages/home">
+                    <Link href="/">
                         <Button className="w-[22rem] justify-start gap-24">
-                            <Search size="28px" />
+                            <ChevronLeft size="28px" />
                             Voltar
                         </Button>
                     </Link>
