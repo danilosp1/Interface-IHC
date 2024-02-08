@@ -22,19 +22,19 @@ export default function Home() {
           Selecione uma opção
         </div>
         <div className="flex flex-col gap-6">
-          <a href="/places">
+          <a href="/lugares">
             <Button className="">
               Lugares
               <Search size="28px" />
             </Button>
           </a>
-          <a href="/ajuda">
+          <a href="/facecheck">
             <Button className="">
               Ajuda
               <Info size="28px" />
             </Button>
           </a>
-          <a href="/support">
+          <a href="/suporte">
             <Button className="">
               Suporte Técnico
               <Laptop2 size="28px" />

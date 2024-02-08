@@ -29,7 +29,7 @@ export default function Atendimento() {
                 </div>
 
                 <div className="">
-                    <a href="/ajuda">
+                    <a href="/facecheck">
                         <Button className="w-[22rem] justify-start gap-24">
                             <ChevronLeft size="28px" />
                             Voltar

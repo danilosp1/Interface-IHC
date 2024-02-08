@@ -1,7 +1,7 @@
 
 import { Button } from "../../components/ui/button"
 import image from "../../assets/logoDC.svg"
-import { Search, Info, Laptop2, ChevronLeft, Smile, HelpCircle} from 'lucide-react';
+import { ChevronLeft, Smile, HelpCircle} from 'lucide-react';
 import { useParams } from "react-router-dom";
 import sentimentoText from "./sentimento.js";
 
@@ -61,7 +61,7 @@ export default function Ajuda() {
 
             <div className="z-0 w-[30%] 2xl:w-[25%] flex flex-col py-24 gap-6 items-center p-4 absolute h-full right-0 border-l-2 border-black">
                 <div className="text-center text-5xl"> 
-                    Sintomas de {sentimentoText[tipo].def}
+                    Sinais de {sentimentoText[tipo].def}
                 </div>
                 <div className="flex flex-col gap-6 text-xl">
                     <ul style={{listStyle: "outside", listStylePosition: "inside"}}>
