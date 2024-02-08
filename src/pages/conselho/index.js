@@ -1,6 +1,6 @@
 import { Button } from "../../components/ui/button"
 import image from "../../assets/logoDC.svg"
-import { Headset, ArrowDownLeftFromSquare, ChevronLeft, Smile } from 'lucide-react';
+import { Headset, ChevronLeft, Smile } from 'lucide-react';
 <Headset />
 
 export default function Conselho() {
@@ -30,7 +30,7 @@ export default function Conselho() {
                     </a>
                     <a href="/sentimento">
                         <Button className="w-[22rem]">
-                            Não estou triste 
+                            Selecionar sentimento
                             <Smile size="28px"/>
                         </Button>
                     </a>

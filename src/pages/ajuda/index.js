@@ -3,6 +3,7 @@ import { Button } from "../../components/ui/button"
 import image from "../../assets/logoDC.svg"
 import { Search, Info, Laptop2, ChevronLeft, Smile, HelpCircle} from 'lucide-react';
 import { useParams } from "react-router-dom";
+import sentimentoText from "./sentimento.js";
 
 
 export default function Ajuda() {
@@ -144,7 +145,7 @@ export default function Ajuda() {
                     Ajuda
                 </div>
                 <div className="text-center text-black text-4xl font-normal w-[60%] 2xl:w-[50%] my-6">
-                    Você parece Triste
+                    Você parece {sentimentoText["1"].texto}
                     , posso te ajudar?
                 </div>
                 <div className="text-center text-black text-2xl font-bold my-6">
@@ -153,7 +154,7 @@ export default function Ajuda() {
                 <div className="flex flex-row gap-6 mb-6">
                     <a href="/sentimento">
                         <Button className="w-[22rem]">
-                            Não estou triste
+                            Não estou {sentimentoText["1"].texto}
                             <Smile size="28px"/>
                         </Button>
                     </a>
@@ -183,15 +184,35 @@ export default function Ajuda() {
 
             <div className="z-0 w-[30%] 2xl:w-[25%] flex flex-col py-24 gap-6 items-center p-4 absolute h-full right-0 border-l-2 border-black">
                 <div className="text-center text-5xl"> 
-                    Sintomas de tristeza
+                    Sintomas de {sentimentoText["1"].def}
                 </div>
                 <div className="flex flex-col gap-6 text-xl">
-                    <div>- Lorem epson</div>
-                    <div>- Lorem epson</div>
-                    <div>- Lorem epson</div>
-                    <div>- Lorem epson</div>
-                    <div>- Lorem epson</div>
-                    <div>- Lorem epson</div>
+                    <ul style={{listStyle: "outside", listStylePosition: "inside"}}>
+                        <div className="font-bold">Físicos</div>
+                        {sentimentoText["1"].fisicos.map(value => {
+                            return (
+                                <li>{value}</li>
+                            )
+                        })}
+                        <div className="font-bold">Emocionais</div>
+                        {sentimentoText["1"].emocionais.map(value => {
+                            return (
+                                <li>{value}</li>
+                            )
+                        })}
+                        <div className="font-bold">Cognitivos</div>
+                        {sentimentoText["1"].cognitivos.map(value => {
+                            return (
+                                <li>{value}</li>
+                            )
+                        })}
+                        <div className="font-bold">Sociais</div>
+                        {sentimentoText["1"].sociais.map(value => {
+                            return (
+                                <li>{value}</li>
+                            )
+                        })}
+                    </ul>
                 </div>
             </div>
         </main>
