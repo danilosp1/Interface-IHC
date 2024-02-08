@@ -1,10 +1,10 @@
 import { Button } from "../../components/ui/button"
 import image from "../../assets/logoDC.svg"
 import lugares from "../../assets/Mapa Piso Terreo DC 2022.jpg"
-import {Info, Computer, MonitorCheck, Presentation, Droplets, LibraryBig, ChevronLeft} from 'lucide-react';
+import { Info, Computer, MonitorCheck, Presentation, Droplets, LibraryBig, ChevronLeft } from 'lucide-react';
 
 
-export default function Places() {
+export default function Lugares() {
   return (
     <main className="flex flex-row h-screen items-center justify-center">
       <div className="w-[20%] 2xl:w-[25%] flex flex-col justify-between items-center p-4 absolute h-full left-0 z-0">
@@ -19,7 +19,15 @@ export default function Places() {
         <div className="text-center text-black text-2xl font-normal my-6">
           Estes são os lugares do departamento
         </div>
-          <img src={lugares} alt="locais" className="" style={{transform: "rotate(90deg)"}} width={600}/>
+        <img src={lugares} alt="locais" className="" style={{ transform: "rotate(90deg)" }} width={350} />
+        <div className="">
+          <a href="/">
+            <Button className="w-[22rem] justify-start gap-24">
+              <ChevronLeft size="28px" />
+              Voltar
+            </Button>
+          </a>
+        </div>
       </div>
 
       <div className="z-0 w-[20%] 2xl:w-[25%] flex flex-col justify-between items-center p-4 absolute h-full right-0">
