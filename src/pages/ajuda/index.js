@@ -2,9 +2,135 @@
 import { Button } from "../../components/ui/button"
 import image from "../../assets/logoDC.svg"
 import { Search, Info, Laptop2, ChevronLeft, Smile, HelpCircle} from 'lucide-react';
+import { useParams } from "react-router-dom";
 
 
 export default function Ajuda() {
+
+    let { tipo } = useParams()
+
+    const tristeza = {
+        "sintomas_tristeza": {
+          "fisicos": [
+            "Choro frequente",
+            "Fadiga",
+            "Distúrbios de sono",
+            "Dores no corpo"
+          ],
+          "emocionais": [
+            "Sentimento de vazio",
+            "Desânimo",
+            "Falta de prazer",
+            "Baixa autoestima"
+          ],
+          "cognitivos": [
+            "Dificuldade de concentração",
+            "Pensamentos negativos",
+            "Autoavaliação negativa"
+          ],
+          "sociais": [
+            "Isolamento social",
+            "Dificuldade em interagir",
+            "Mudanças no apetite"
+          ]
+        }
+    }
+
+    const felicidade = {
+        "sintomas_felicidade": {
+          "fisicos": [
+            "Sensação de leveza",
+            "Sorriso frequente",
+            "Aumento de energia",
+            "Bem-estar geral"
+          ],
+          "emocionais": [
+            "Contentamento",
+            "Entusiasmo",
+            "Satisfação",
+            "Alegria intensificada"
+          ],
+          "cognitivos": [
+            "Pensamentos positivos",
+            "Clareza mental",
+            "Foco e concentração"
+          ],
+          "sociais": [
+            "Socialização ativa",
+            "Empatia",
+            "Compartilhamento de conquistas"
+          ]
+        }
+    }
+
+    const raiva = {
+        "sintomas_raiva": {
+            "fisicos": [
+            "Aumento da frequência cardíaca",
+            "Tensão muscular",
+            "Respiração acelerada",
+            "Punhos cerrados"
+            ],
+            "emocionais": [
+            "Sentimento de irritação",
+            "Frustração intensa",
+            "Hostilidade",
+            "Impaciência"
+            ],
+            "cognitivos": [
+            "Pensamentos negativos",
+            "Dificuldade de raciocínio lógico",
+            "Foco estreitado"
+            ],
+            "sociais": [
+            "Isolamento social",
+            "Comportamento agressivo",
+            "Dificuldade de comunicação"
+            ]
+        }
+    }
+
+    const indefinido = {
+    "sintomas_emocao_indefinida": {
+        "fisicos": [
+        "Sensação de desconforto",
+        "Inquietação",
+        "Variações na energia"
+        ],
+        "emocionais": [
+        "Confusão emocional",
+        "Dificuldade em nomear sentimentos",
+        "Flutuações de humor"
+        ],
+        "cognitivos": [
+        "Pensamentos confusos",
+        "Falta de clareza mental",
+        "Reflexões ambíguas"
+        ],
+        "sociais": [
+        "Retraimento social",
+        "Dificuldade em expressar emoções",
+        "Comportamento reservado"
+        ]
+    }
+    }
+
+    function renderEmotion(tipo) {
+        switch (tipo) {
+            case '1' :
+                return tristeza
+                break
+            case '2' :
+                return raiva
+                break
+            case '3' :
+                return felicidade
+                break
+            case '4' :
+                return indefinido
+                break
+        }
+    }
 
     return (
         <main className="flex flex-row h-screen items-center justify-center">

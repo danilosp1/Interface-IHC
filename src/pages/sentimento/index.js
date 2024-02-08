@@ -19,13 +19,13 @@ export default function Sentimento() {
           Selecione uma opção
         </div>
         <div className="flex flex-row gap-6 mb-6">
-          <a href="/ajuda">
+          <a href="/ajuda/1">
             <Button className="w-[22rem]">
               Estou triste
               <Frown size="28px" />
             </Button>
           </a>
-          <a href="/ajuda">
+          <a href="/ajuda/2">
             <Button className="w-[22rem]">
               Estou irritado
               <Angry size="28px" />
@@ -33,13 +33,13 @@ export default function Sentimento() {
           </a>
         </div>
         <div className="flex flex-row gap-6 mb-12">
-          <a href="/ajuda">
+          <a href="/ajuda/3">
             <Button className="w-[22rem]">
               Estou feliz
               <Smile size="28px" />
             </Button>
           </a>
-          <a href="/ajuda">
+          <a href="/ajuda/4">
             <Button className="w-[22rem]">
               Não sei
               <HelpCircle size="28px" />
