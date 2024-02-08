@@ -1,6 +1,6 @@
 import { Button } from "../../components/ui/button"
 import image from "../../assets/logoDC.svg"
-import { Search, Info, Laptop2, ArrowDownLeftFromSquare } from 'lucide-react';
+import { Search, HelpCircle, Smile, Frown, Angry, ChevronLeft } from 'lucide-react';
 
 
 export default function Sentimento() {
@@ -22,13 +22,13 @@ export default function Sentimento() {
           <a href="/ajuda">
             <Button className="w-[22rem]">
               Estou triste
-              <ArrowDownLeftFromSquare size="28px" />
+              <Frown size="28px" />
             </Button>
           </a>
           <a href="/ajuda">
             <Button className="w-[22rem]">
               Estou irritado
-              <Search size="28px" />
+              <Angry size="28px" />
             </Button>
           </a>
         </div>
@@ -36,20 +36,20 @@ export default function Sentimento() {
           <a href="/ajuda">
             <Button className="w-[22rem]">
               Estou feliz
-              <Search size="28px" />
+              <Smile size="28px" />
             </Button>
           </a>
           <a href="/ajuda">
             <Button className="w-[22rem]">
               Não sei
-              <Search size="28px" />
+              <HelpCircle size="28px" />
             </Button>
           </a>
         </div>
         <div className="">
           <a href="/ajuda">
             <Button className="w-[22rem] justify-start gap-24">
-              <Search size="28px" />
+              <ChevronLeft size="28px" />
               Voltar
             </Button>
           </a>

@@ -1,7 +1,7 @@
 import { Button } from "../../components/ui/button"
 import image from "../../assets/logoDC.svg"
-import { Search, Info, Laptop2, ArrowDownLeftFromSquare } from 'lucide-react';
-
+import { Headset, ArrowDownLeftFromSquare, ChevronLeft, Smile } from 'lucide-react';
+<Headset />
 
 export default function Conselho() {
     return (
@@ -25,12 +25,13 @@ export default function Conselho() {
                     <a href="/atendimento">
                         <Button className="w-[22rem]">
                             Atendimento
-                            <ArrowDownLeftFromSquare size="28px" />
+                            <Headset size="28px" />
                         </Button>
                     </a>
                     <a href="/sentimento">
-                        <Button className="w-[22rem] justify-center item-center">
-                            Não estou triste
+                        <Button className="w-[22rem]">
+                            Não estou triste 
+                            <Smile size="28px"/>
                         </Button>
                     </a>
                 </div>
@@ -38,7 +39,7 @@ export default function Conselho() {
                 <div className="">
                     <a href="/ajuda">
                         <Button className="w-[22rem] justify-start gap-24">
-                            <Search size="28px" />
+                            <ChevronLeft size="28px" />
                             Voltar
                         </Button>
                     </a>

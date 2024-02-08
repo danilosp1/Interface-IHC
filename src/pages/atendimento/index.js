@@ -1,7 +1,7 @@
 
 import { Button } from "../../components/ui/button"
 import image from "../../assets/logoDC.svg"
-import { Search, Info, Laptop2, ArrowDownLeftFromSquare } from 'lucide-react';
+import { Search, ChevronLeft } from 'lucide-react';
 
 export default function Atendimento() {
     return (
@@ -31,7 +31,7 @@ export default function Atendimento() {
                 <div className="">
                     <a href="/">
                         <Button className="w-[22rem] justify-start gap-24">
-                            <Search size="28px" />
+                            <ChevronLeft size="28px" />
                             Voltar
                         </Button>
                     </a>
