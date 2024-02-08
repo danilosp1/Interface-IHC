@@ -1,8 +1,8 @@
 import { Button } from "../../components/ui/button"
 import image from "../../assets/logoDC.svg"
-import {ChevronLeft } from 'lucide-react';
+import { ChevronLeft } from 'lucide-react';
 
-export default function Support() {
+export default function Suporte() {
     return (
         <main className="flex flex-row h-screen items-center justify-center">
             <div className="w-[20%] 2xl:w-[25%] flex flex-col justify-between items-center p-4 absolute h-full left-0 z-0">
