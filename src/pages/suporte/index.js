@@ -1,8 +1,22 @@
 import { Button } from "../../components/ui/button"
 import image from "../../assets/logoDC.svg"
 import { ChevronLeft } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+
 
 export default function Suporte() {
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    useEffect(() => {
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth);
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
     return (
         <main className="flex flex-row h-ful min-h-screen items-center justify-center">
             <div className="w-[20%] 2xl:w-[25%] hidden lg:flex flex-col justify-between items-center p-4 absolute h-full left-0 z-0">
@@ -23,7 +37,7 @@ export default function Suporte() {
 
                 <div className="">
                     <a href="/">
-                        <Button size="lg" className="lg:w-[22rem] justify-start  gap-4 lg:gap-24">
+                        <Button size={windowWidth < 1080 ? "lg" : ""} className="lg:w-[22rem] justify-start  gap-4 lg:gap-24">
                             <ChevronLeft size="28px" />
                             Voltar
                         </Button>

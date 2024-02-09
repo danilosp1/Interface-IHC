@@ -1,5 +1,4 @@
 import { Button } from "../../components/ui/button";
-import image from "../../assets/logoDC.svg";
 import lugares from "../../assets/Mapa Piso Terreo DC 2022.jpg";
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft } from "lucide-react";
@@ -17,7 +16,7 @@ export default function Lugares() {
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, []);
+  }, []); 
 
   return (
     <main className="flex flex-row h-ful min-h-screen items-center justify-center relative">
@@ -43,7 +42,7 @@ export default function Lugares() {
         </div>
         <div className="lg:absolute lg:top-0 left-0 mt-4 ml-4 z-10">
           <a href="/">
-            <Button className="w-[12rem] flex justify-center items-center">
+            <Button size={windowWidth < 1080 ? "lg" : ""} className="w-[12rem] flex justify-center items-center">
               <ChevronLeft size="28px" className="mr-2" />
               Voltar
             </Button>

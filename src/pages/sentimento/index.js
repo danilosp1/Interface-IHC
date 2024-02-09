@@ -1,9 +1,21 @@
 import { Button } from "../../components/ui/button"
 import image from "../../assets/logoDC.svg"
 import { HelpCircle, Smile, Frown, Angry, ChevronLeft } from 'lucide-react';
-
+import React, { useState, useEffect } from 'react';
 
 export default function Sentimento() {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   return (
     <main className="flex flex-row h-ful min-h-screen items-center justify-center">
       <div className="w-[20%] 2xl:w-[25%] hidden lg:flex flex-col justify-between items-center p-4 absolute h-full left-0 z-0">
@@ -20,13 +32,13 @@ export default function Sentimento() {
         </div>
         <div className="flex flex-col lg:flex-row gap-6 mb-6">
           <a href="/ajuda/1">
-            <Button size="lg" className="lg:w-[22rem]">
+            <Button size={windowWidth < 1080 ? "lg" : ""} className="lg:w-[22rem]">
               Estou triste
               <Frown size="28px" />
             </Button>
           </a>
           <a href="/ajuda/3">
-            <Button size="lg" className="lg:w-[22rem]">
+            <Button size={windowWidth < 1080 ? "lg" : ""} className="lg:w-[22rem]">
               Estou irritado
               <Angry size="28px" />
             </Button>
@@ -34,13 +46,13 @@ export default function Sentimento() {
         </div>
         <div className="flex flex-col lg:flex-row gap-6 mb-12">
           <a href="/ajuda/2">
-            <Button size="lg" className="lg:w-[22rem]">
+            <Button size={windowWidth < 1080 ? "lg" : ""} className="lg:w-[22rem]">
               Estou feliz
               <Smile size="28px" />
             </Button>
           </a>
           <a href="/ajuda/4">
-            <Button size="lg" className="lg:w-[22rem]">
+            <Button size={windowWidth < 1080 ? "lg" : ""} className="lg:w-[22rem]">
               Não sei
               <HelpCircle size="28px" />
             </Button>
@@ -48,7 +60,7 @@ export default function Sentimento() {
         </div>
         <div className="">
           <a href="/facecheck">
-            <Button size="lg" className="lg:w-[22rem] justify-start  gap-4 lg:gap-24">
+            <Button size={windowWidth < 1080 ? "lg" : ""} className="lg:w-[22rem] justify-start  gap-4 lg:gap-24">
               <ChevronLeft size="28px" />
               Voltar
             </Button>

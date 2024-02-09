@@ -1,9 +1,21 @@
 import { Button } from "../../components/ui/button"
 import image from "../../assets/logoDC.svg"
 import { Headset, ChevronLeft, Smile } from 'lucide-react';
-<Headset />
+import React, { useState, useEffect } from 'react';
 
 export default function Conselho() {
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    useEffect(() => {
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth);
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
     return (
         <main className="flex flex-row h-ful min-h-screen items-center justify-center">
             <div className="w-[20%] 2xl:w-[25%] hidden lg:flex flex-col justify-between items-center p-4 absolute h-full left-0 z-0">
@@ -23,13 +35,13 @@ export default function Conselho() {
                 </div>
                 <div className="flex flex-col lg:flex-row gap-6 mb-16">
                     <a href="/atendimento">
-                        <Button size="lg" className="lg:w-[22rem]">
+                        <Button size={windowWidth < 1080 ? "lg" : ""} className="lg:w-[22rem]">
                             Atendimento
                             <Headset size="28px" />
                         </Button>
                     </a>
                     <a href="/sentimento">
-                        <Button size="lg" className="lg:w-[22rem]">
+                        <Button size={windowWidth < 1080 ? "lg" : ""} className="lg:w-[22rem]">
                             Selecionar sentimento
                             <Smile size="28px" />
                         </Button>
@@ -38,7 +50,7 @@ export default function Conselho() {
 
                 <div className="">
                     <a href="/facecheck">
-                        <Button size="lg" className="lg:w-[22rem] justify-start  gap-4 lg:gap-24">
+                        <Button size={windowWidth < 1080 ? "lg" : ""} className="lg:w-[22rem] justify-start  gap-4 lg:gap-24">
                             <ChevronLeft size="28px" />
                             Voltar
                         </Button>
