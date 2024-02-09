@@ -68,8 +68,7 @@ const EmotionCheck = () => {
 
     return (
         <div className='flex flex-row h-ful min-h-screen items-center justify-center'>
-            <div className="w-[20%] 2xl:w-[25%] hidden lg:flex flex-col justify-between items-center p-4 absolute h-full left-0 z-0">
-                <img alt="logo dc" src={image} width={350} height={350}></img>
+            <div className="w-[20%] 2xl:w-[25%] hidden lg:flex flex-col justify-start items-center p-4 absolute h-full left-0 z-0">
                 <img alt="logo dc" src={image} width={350} height={350}></img>
             </div>
 
@@ -92,8 +91,6 @@ const EmotionCheck = () => {
             </div>
 
             <div className="w-[20%] 2xl:w-[25%] hidden lg:flex flex-col justify-between items-center p-4 absolute h-full right-0 z-0">
-                <img alt="logo dc" src={image} width={350} height={350}></img>
-                <img alt="logo dc" src={image} width={350} height={350}></img>
             </div>
         </div>
     );

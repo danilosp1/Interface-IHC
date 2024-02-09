@@ -1,7 +1,6 @@
-
 import { Button } from "../../components/ui/button"
 import image from "../../assets/logoDC.svg"
-import { ChevronLeft, Smile, HelpCircle } from 'lucide-react';
+import { ChevronLeft, HandHelping, HeartHandshake } from 'lucide-react';
 import { useParams } from "react-router-dom";
 import sentimentoText from "./sentimento.js";
 import React, { useState, useEffect } from 'react';
@@ -24,8 +23,7 @@ export default function Ajuda() {
 
     return (
         <main className="flex lg:flex-row flex-col pt-24 lg:pt-0 h-ful min-h-screen items-center justify-center">
-            <div className="w-[20%] 2xl:w-[25%] hidden lg:flex flex-col justify-between items-center p-4 absolute h-full left-0 z-0">
-                <img alt="logo dc" src={image} width={350} height={350}></img>
+            <div className="w-[20%] 2xl:w-[25%] hidden lg:flex flex-col justify-start items-center p-4 absolute h-full left-0 z-0">
                 <img alt="logo dc" src={image} width={350} height={350}></img>
             </div>
 
@@ -47,19 +45,22 @@ export default function Ajuda() {
                         </Button>
                     </a>
                 </div>
-                <div className="flex flex-row gap-6">
+                <div className="flex flex-row gap-6 mb-6">
                     <a href="/conselho">
                         <Button size={windowWidth < 1080 ? "lg" : ""} className="lg:w-[22rem]">
                             Conselho
-                            <HelpCircle size="28px" />
+                            <HandHelping size="28px" />
                         </Button>
                     </a>
                 </div>
-                <a href="/atendimento">
-                    <div className="text-center text-black text-lg lg:text-2xl font-medium italic my-6">
-                        Procurar ajuda
-                    </div>
-                </a>
+                <div className="flex flex-row gap-6 mb-6">
+                    <a href="/atendimento">
+                        <Button size={windowWidth < 1080 ? "lg" : ""} className="lg:w-[22rem]">
+                            Procurar ajuda
+                            <HeartHandshake size="28px" />
+                        </Button>
+                    </a>
+                </div>
                 <div className="">
                     <a href="/">
                         <Button size={windowWidth < 1080 ? "lg" : ""} className="lg:w-[22rem] justify-start  gap-4 lg:gap-24">

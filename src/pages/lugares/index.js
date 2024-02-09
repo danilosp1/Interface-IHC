@@ -1,5 +1,6 @@
 import { Button } from "../../components/ui/button";
 import lugares from "../../assets/Mapa Piso Terreo DC 2022.jpg";
+import image from "../../assets/logoDC.svg"
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft } from "lucide-react";
 
@@ -20,6 +21,9 @@ export default function Lugares() {
 
   return (
     <main className="flex flex-row h-ful min-h-screen items-center justify-center relative">
+      <div className="w-[20%] 2xl:w-[25%] hidden lg:flex flex-col justify-start items-center p-4 absolute h-full left-0 z-0">
+        <img alt="logo dc" src={image} width={350} height={350}></img>
+      </div>
 
       <div className="z-10 w-full lg:w-[60%] 2xl:w-[50%] flex flex-col items-center justify-center h-full">
         <div className="flex flex-col items-center justify-center">
@@ -40,7 +44,7 @@ export default function Lugares() {
             }}
           />
         </div>
-        <div className="lg:absolute lg:top-0 left-0 mt-4 ml-4 z-10">
+        <div className="mt-4 z-10">
           <a href="/">
             <Button size={windowWidth < 1080 ? "lg" : ""} className="w-[12rem] flex justify-center items-center">
               <ChevronLeft size="28px" className="mr-2" />

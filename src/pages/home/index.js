@@ -1,6 +1,6 @@
 import { Button } from "../../components/ui/button"
 import image from "../../assets/logoDC.svg"
-import { Search, Info, Laptop2 } from 'lucide-react';
+import { Search, Laptop2, HeartHandshake } from 'lucide-react';
 import React, { useState, useEffect } from 'react';
 
 
@@ -22,9 +22,7 @@ export default function Home() {
 
   return (
     <main className="flex flex-row h-ful min-h-screen">
-      <div className="hidden lg:flex w-[20%] 2xl:w-[25%] flex-col justify-evenly items-center p-4">
-        <img alt="logo dc" src={image} width={350} height={350}></img>
-        <img alt="logo dc" src={image} width={350} height={350}></img>
+      <div className="hidden lg:flex w-[20%] 2xl:w-[25%] flex-col justify-start items-center p-4">
         <img alt="logo dc" src={image} width={350} height={350}></img>
       </div>
 
@@ -47,8 +45,8 @@ export default function Home() {
           </a>
           <a href="/facecheck">
             <Button size={windowWidth < 1080 ? "lg" : ""} className="">
-              Ajuda
-              <Info size="28px" />
+              Ajuda Emocional
+              <HeartHandshake size="28px" />
             </Button>
           </a>
           <a href="/suporte">
@@ -59,12 +57,6 @@ export default function Home() {
 
           </a>
         </div>
-      </div>
-
-      <div className="hidden lg:flex w-[20%] 2xl:w-[25%] flex-col justify-evenly items-center p-4">
-        <img alt="logo dc" src={image} width={350} height={350}></img>
-        <img alt="logo dc" src={image} width={350} height={350}></img>
-        <img alt="logo dc" src={image} width={350} height={350}></img>
       </div>
     </main>
   );
